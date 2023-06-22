@@ -20,5 +20,9 @@ services:
       - MARIADB_USER=yona
       - MARIADB_PASSWORD=pass1234
       - MARIADB_DATABASE=yona
+      - TZ=Asia/Seoul
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
     volumes:
       - ./yona-db:/var/lib/mysql
